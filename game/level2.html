@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Jolly Lodger' rel='stylesheet'>
+    <title>Level 2</title>
+<head>
+
+    <style>
+      * {
+        box-sizing: border-box;
+
+      }
+      
+
+
+html {
+    
+    background: url(misc/bg2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+body{
+    position: relative;
+    top: 89px;
+    left: 87px;
+}
+canvas{
+    border-radius: 55px;
+}
+.button{
+    background-color: gray;
+    border-radius: 50px;
+    height: 30px;
+    position: relative;
+    left: 130px;
+    bottom: 169px;
+   
+}
+.btn{
+    background-color: gray;
+    border-radius: 50px;
+    height: 35px;
+    position: relative;
+    left: 35px;
+    bottom: 538px;
+    transform: rotate(67deg);
+    width: 100px;
+    border-radius: 10px;
+}
+.btntwo{
+  background-color: gray;
+    border-radius: 50px;
+    height: 35px;
+    position: relative;
+    transform: rotate(-52deg);
+    width: 100px;
+    border-radius: 10px;
+    bottom: 310px;
+    right: 67px;
+
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- red container div -->
+    <div style="position: relative; display: inline-block">
+      <!-- smaller red container div -->
+      <div
+        style="
+          position: absolute;
+          display: flex;
+          width: 100%;
+          align-items: center;
+          padding: 20px;
+        "
+      >
+        <!-- player health -->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            border-top: 4px solid rgb(254, 0, 0);
+            border-left: 4px solid rgb(255, 0, 0);
+            border-bottom: 4px solid rgb(255, 0, 0);
+            border-radius: 30px;
+          "
+        >
+          <div style="background-color: rgb(241, 145, 145);
+           height: 30px;
+            width: 100%;
+            border-radius: 30px;"></div>
+          <div
+            id="playerHealth"
+            style="
+              position: absolute;
+              background: #a4a9dc;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+              border-radius: 35px;
+            "
+          ></div>
+        </div>
+  
+        <!-- timer -->
+        <div
+          id="timer"
+          style="
+            background-color: rgb(241, 136, 157);
+            width: 100px;
+            height: 50px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            border: 4px solid rgb(157, 0, 255);
+            border-radius: 10px;
+          "
+        >
+          10
+        </div>
+        <!-- enemy health -->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            border-top: 4px solid rgb(0, 8, 255);
+            border-bottom: 4px solid rgb(0, 8, 255);
+            border-right: 4px solid rgb(0, 8, 255);
+            border-radius: 30px;
+          "
+        >
+          <div style="background-color:
+           rgb(92, 195, 255);
+            height: 30px;
+            border-radius: 30px;"></div>
+          <div
+            id="enemyHealth"
+            style="
+              position: absolute;
+              background: #ffe600;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              border-radius: 35px;
+            "
+          ></div>
+        </div>
+        <div></div>
+      </div>
+      <div
+        id="displayText"
+        style="
+          position: absolute;
+          color: rgb(0, 107, 107);
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: none;
+          font-size: 100px;
+          font-family: 'Jolly Lodger';
+          font-weight: bolder;
+        "
+      >
+        Tie
+      </div>
+      <canvas id="gameCanvas" ></canvas> 
+    </div>
+  
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+
+      
+    ></script>
+    <script src="utils copy.js"></script>
+    <script src="classes1.js"></script>
+    <script src="index copy.js"></script>
+    <script>
+        function play() {
+          var audio = document.getElementById("audio");
+          audio.play();
+        }
+      </script>
+  
+      <input class="button" type="button" value="Play Music" onclick="play()">
+      <audio id="audio" src="muisc2.mp3"></audio>
+      
+      <button class="btn" type="button" onClick="window.location.reload();">Refresh</button>
+
+      <input class="btntwo" type="button" value="Level 3!" onclick="window.open('level3.html');" > 
+
+
+      
+  
+  </body>
